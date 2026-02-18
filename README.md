@@ -1,3 +1,5 @@
+![AWS](https://img.shields.io/badge/AWS-Compatible-orange?logo=amazon-aws)
+![Terraform](https://img.shields.io/badge/Terraform-v1.0+-623CE4?logo=terraform)
 ## AWS EC2 Web Instance Deployment
 This Terraform project provisions a single **t3.micro** EC2 instance on AWS, configured for SSH access using a custom public key.
 
