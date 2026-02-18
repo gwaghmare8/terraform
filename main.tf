@@ -8,16 +8,17 @@ resource "aws_instance" "web" {
   vpc_security_group_ids      = [aws_security_group.sg.id]
 
   tags = {
-    Name = "webserver1"
+    Name = var.instance-name
   }
 }
 
-// Creating a key-pair
+// Creating a key-pair and referencing to the main function
 resource "aws_key_pair" "key" {
   key_name   = "tarraform-key"
   public_key = file("./terraform-key.pub")
 }
 
+//Creating a security group using TCP protocol and ssh port
 resource "aws_security_group" "sg" {
   name = "frontend-sg"
 
