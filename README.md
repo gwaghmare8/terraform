@@ -41,7 +41,14 @@ variable "instance-name" {
   default = "my-first-ec2"
 }
 ```
+3. Outputs
+Once the deployment is complete, Terraform will display the following information:  
+`ec2-ip`: The public `IPv4` address assigned to the EC2 instance, which you can use for `SSH` connections.
 
+## Project Structure
+`provider.tf`: Configures the `AWS` provider and region (`eu-west-1`).
+`variable.tf`: Defines input variables like `instance-name` to make the configuration reusable.
+`output.tf`: Extracts the `Public IP` of the provisioned instance for easy access.  
   
 ## Deployment Commands
 
